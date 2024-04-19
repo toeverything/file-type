@@ -60,24 +60,24 @@ function requireNative() {
   if (process.platform === 'android') {
     if (process.arch === 'arm64') {
       try {
-        return require('./package-template.android-arm64.node')
+        return require('./file-type.android-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-android-arm64')
+        return require('@napi-rs/file-type-android-arm64')
       } catch (e) {
         loadErrors.push(e)
       }
 
     } else if (process.arch === 'arm') {
       try {
-        return require('./package-template.android-arm-eabi.node')
+        return require('./file-type.android-arm-eabi.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-android-arm-eabi')
+        return require('@napi-rs/file-type-android-arm-eabi')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -88,36 +88,36 @@ function requireNative() {
   } else if (process.platform === 'win32') {
     if (process.arch === 'x64') {
       try {
-        return require('./package-template.win32-x64-msvc.node')
+        return require('./file-type.win32-x64-msvc.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-win32-x64-msvc')
+        return require('@napi-rs/file-type-win32-x64-msvc')
       } catch (e) {
         loadErrors.push(e)
       }
 
     } else if (process.arch === 'ia32') {
       try {
-        return require('./package-template.win32-ia32-msvc.node')
+        return require('./file-type.win32-ia32-msvc.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-win32-ia32-msvc')
+        return require('@napi-rs/file-type-win32-ia32-msvc')
       } catch (e) {
         loadErrors.push(e)
       }
 
     } else if (process.arch === 'arm64') {
       try {
-        return require('./package-template.win32-arm64-msvc.node')
+        return require('./file-type.win32-arm64-msvc.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-win32-arm64-msvc')
+        return require('@napi-rs/file-type-win32-arm64-msvc')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -127,36 +127,36 @@ function requireNative() {
     }
   } else if (process.platform === 'darwin') {
     try {
-        return require('./package-template.darwin-universal.node')
+        return require('./file-type.darwin-universal.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-darwin-universal')
+        return require('@napi-rs/file-type-darwin-universal')
       } catch (e) {
         loadErrors.push(e)
       }
 
     if (process.arch === 'x64') {
       try {
-        return require('./package-template.darwin-x64.node')
+        return require('./file-type.darwin-x64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-darwin-x64')
+        return require('@napi-rs/file-type-darwin-x64')
       } catch (e) {
         loadErrors.push(e)
       }
 
     } else if (process.arch === 'arm64') {
       try {
-        return require('./package-template.darwin-arm64.node')
+        return require('./file-type.darwin-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-darwin-arm64')
+        return require('@napi-rs/file-type-darwin-arm64')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -167,24 +167,24 @@ function requireNative() {
   } else if (process.platform === 'freebsd') {
     if (process.arch === 'x64') {
       try {
-        return require('./package-template.freebsd-x64.node')
+        return require('./file-type.freebsd-x64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-freebsd-x64')
+        return require('@napi-rs/file-type-freebsd-x64')
       } catch (e) {
         loadErrors.push(e)
       }
 
     } else if (process.arch === 'arm64') {
       try {
-        return require('./package-template.freebsd-arm64.node')
+        return require('./file-type.freebsd-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-freebsd-arm64')
+        return require('@napi-rs/file-type-freebsd-arm64')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -196,24 +196,24 @@ function requireNative() {
     if (process.arch === 'x64') {
       if (isMusl()) {
         try {
-        return require('./package-template.linux-x64-musl.node')
+        return require('./file-type.linux-x64-musl.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-linux-x64-musl')
+        return require('@napi-rs/file-type-linux-x64-musl')
       } catch (e) {
         loadErrors.push(e)
       }
 
       } else {
         try {
-        return require('./package-template.linux-x64-gnu.node')
+        return require('./file-type.linux-x64-gnu.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-linux-x64-gnu')
+        return require('@napi-rs/file-type-linux-x64-gnu')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -222,24 +222,24 @@ function requireNative() {
     } else if (process.arch === 'arm64') {
       if (isMusl()) {
         try {
-        return require('./package-template.linux-arm64-musl.node')
+        return require('./file-type.linux-arm64-musl.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-linux-arm64-musl')
+        return require('@napi-rs/file-type-linux-arm64-musl')
       } catch (e) {
         loadErrors.push(e)
       }
 
       } else {
         try {
-        return require('./package-template.linux-arm64-gnu.node')
+        return require('./file-type.linux-arm64-gnu.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-linux-arm64-gnu')
+        return require('@napi-rs/file-type-linux-arm64-gnu')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -248,24 +248,24 @@ function requireNative() {
     } else if (process.arch === 'arm') {
       if (isMusl()) {
         try {
-        return require('./package-template.linux-arm-musleabihf.node')
+        return require('./file-type.linux-arm-musleabihf.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-linux-arm-musleabihf')
+        return require('@napi-rs/file-type-linux-arm-musleabihf')
       } catch (e) {
         loadErrors.push(e)
       }
 
       } else {
         try {
-        return require('./package-template.linux-arm-gnueabihf.node')
+        return require('./file-type.linux-arm-gnueabihf.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-linux-arm-gnueabihf')
+        return require('@napi-rs/file-type-linux-arm-gnueabihf')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -274,24 +274,24 @@ function requireNative() {
     } else if (process.arch === 'riscv64') {
       if (isMusl()) {
         try {
-        return require('./package-template.linux-riscv64-musl.node')
+        return require('./file-type.linux-riscv64-musl.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-linux-riscv64-musl')
+        return require('@napi-rs/file-type-linux-riscv64-musl')
       } catch (e) {
         loadErrors.push(e)
       }
 
       } else {
         try {
-        return require('./package-template.linux-riscv64-gnu.node')
+        return require('./file-type.linux-riscv64-gnu.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-linux-riscv64-gnu')
+        return require('@napi-rs/file-type-linux-riscv64-gnu')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -299,24 +299,24 @@ function requireNative() {
       }
     } else if (process.arch === 'ppc64') {
       try {
-        return require('./package-template.linux-ppc64-gnu.node')
+        return require('./file-type.linux-ppc64-gnu.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-linux-ppc64-gnu')
+        return require('@napi-rs/file-type-linux-ppc64-gnu')
       } catch (e) {
         loadErrors.push(e)
       }
 
     } else if (process.arch === 's390x') {
       try {
-        return require('./package-template.linux-s390x-gnu.node')
+        return require('./file-type.linux-s390x-gnu.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        return require('@napi-rs/package-template-pnpm-linux-s390x-gnu')
+        return require('@napi-rs/file-type-linux-s390x-gnu')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -333,7 +333,7 @@ nativeBinding = requireNative()
 
 if (!nativeBinding || process.env.NAPI_RS_FORCE_WASI) {
   try {
-    nativeBinding = require('./package-template.wasi.cjs')
+    nativeBinding = require('./file-type.wasi.cjs')
   } catch (err) {
     if (process.env.NAPI_RS_FORCE_WASI) {
       console.error(err)
@@ -341,7 +341,7 @@ if (!nativeBinding || process.env.NAPI_RS_FORCE_WASI) {
   }
   if (!nativeBinding) {
     try {
-      nativeBinding = require('@napi-rs/package-template-pnpm-wasm32-wasi')
+      nativeBinding = require('@napi-rs/file-type-wasm32-wasi')
     } catch (err) {
       if (process.env.NAPI_RS_FORCE_WASI) {
         console.error(err)
@@ -361,4 +361,5 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-module.exports.plus100 = nativeBinding.plus100
+module.exports.FileType = nativeBinding.FileType
+module.exports.Kind = nativeBinding.Kind

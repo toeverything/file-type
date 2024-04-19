@@ -1,28 +1,23 @@
-import b from 'benny'
+import { readFile } from 'node:fs/promises'
+import { fileURLToPath } from 'node:url'
+import { join } from 'node:path'
 
-import { plus100 } from '../index'
+import { Bench } from 'tinybench'
+import { fileTypeFromBuffer } from 'file-type'
 
-function add(a: number) {
-  return a + 100
-}
+import { FileType } from '../index.js'
 
-async function run() {
-  await b.suite(
-    'Add 100',
+const b = new Bench()
 
-    b.add('Native a + 100', () => {
-      plus100(10)
-    }),
+const FIXTURE = await readFile(join(fileURLToPath(import.meta.url), '..', '..', '__test__', 'sample.jpg'))
 
-    b.add('JavaScript a + 100', () => {
-      add(10)
-    }),
-
-    b.cycle(),
-    b.complete(),
-  )
-}
-
-run().catch((e) => {
-  console.error(e)
+b.add('@napi-rs/file-type', () => {
+  const ft = new FileType(FIXTURE)
+  ft.extension()
+}).add('file-type', async () => {
+  await fileTypeFromBuffer(FIXTURE)
 })
+
+await b.warmup()
+await b.run()
+console.table(b.table())
