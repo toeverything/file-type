@@ -1,12 +1,12 @@
 {
-  "name": "@napi-rs/package-template-pnpm",
+  "name": "@napi-rs/file-type",
   "version": "0.0.0",
-  "description": "Template project for writing node package with napi-rs",
+  "description": "Guess the file-type of a Uint8Array",
   "main": "index.js",
   "types": "index.d.ts",
   "browser": "browser.js",
   "repository": {
-    "url": "git+ssh://git@github.com/napi-rs/package-template-pnpm.git",
+    "url": "git+ssh://git@github.com/Brooooooklyn/file-type.git",
     "type": "git"
   },
   "license": "MIT",
@@ -40,8 +40,7 @@
       "aarch64-pc-windows-msvc",
       "armv7-linux-androideabi",
       "wasm32-wasi-preview1-threads"
-    ],
-    "packageName": "@napi-rs/file-type"
+    ]
   },
   "engines": {
     "node": ">= 10"
