@@ -11,7 +11,7 @@ const b = new Bench()
 
 const FIXTURE = await readFile(join(fileURLToPath(import.meta.url), '..', '..', '__test__', 'sample.jpg'))
 
-b.add('@napi-rs/file-type', () => {
+b.add('@toeverything/file-type', () => {
   const ft = new FileType(FIXTURE)
   ft.extension()
 }).add('file-type', async () => {

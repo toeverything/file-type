@@ -1,6 +1,6 @@
 # `@toeverything/file-type`
 
-![https://github.com/Brooooooklyn/file-type/actions](https://github.com/Brooooooklyn/file-type/workflows/CI/badge.svg)
+![https://github.com/toeverything/file-type/actions](https://github.com/toeverything/file-type/workflows/CI/badge.svg)
 
 # Usage
 
@@ -20,7 +20,7 @@ console.log(fileType.ext()) // 'jpg'
 ┌─────────┬──────────────────────┬─────────────┬────────────────────┬──────────┬─────────┐
 │ (index) │ Task Name            │ ops/sec     │ Average Time (ns)  │ Margin   │ Samples │
 ├─────────┼──────────────────────┼─────────────┼────────────────────┼──────────┼─────────┤
-│ 0       │ '@napi-rs/file-type' │ '1,505,155' │ 664.3832625987645  │ '±2.22%' │ 752578  │
+│ 0       │ '@toeverything/file-type' │ '1,505,155' │ 664.3832625987645  │ '±2.22%' │ 752578  │
 │ 1       │ 'file-type'          │ '663,435'   │ 1507.3055818495407 │ '±0.36%' │ 331718  │
 └─────────┴──────────────────────┴─────────────┴────────────────────┴──────────┴─────────┘
 ```
