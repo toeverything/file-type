@@ -1,4 +1,4 @@
-# `@napi-rs/file-type`
+# `@toeverything/file-type`
 
 ![https://github.com/Brooooooklyn/file-type/actions](https://github.com/Brooooooklyn/file-type/workflows/CI/badge.svg)
 
@@ -7,7 +7,7 @@
 ```ts
 import { readFile } from 'node:fs'
 
-import { FileType } from '@napi-rs/file-type'
+import { FileType } from '@toeverything/file-type'
 
 const fileType = new FileType(await readFile('path/to/file.jpg'))
 console.log(fileType.mime()) // 'application/image/jpeg'
