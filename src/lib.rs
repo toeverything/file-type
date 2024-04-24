@@ -2,11 +2,15 @@
 
 use napi_derive::napi;
 
+#[cfg(not(target_family = "wasm"))]
+#[global_allocator]
+static ALLOC: mimalloc::MiMalloc = mimalloc::MiMalloc;
+
 #[napi]
 pub struct FileType(file_format::FileFormat);
 
 /// A kind of file format.
-#[napi]
+#[napi(string_enum)]
 pub enum Kind {
   /// Files and directories stored in a single, possibly compressed, archive.
   Archive,
