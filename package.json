@@ -1,12 +1,12 @@
 {
-  "name": "@napi-rs/file-type",
+  "name": "@toeverything/file-type",
   "version": "0.0.0",
   "description": "Guess the file-type of a Uint8Array",
   "main": "index.js",
   "types": "index.d.ts",
   "browser": "browser.js",
   "repository": {
-    "url": "git+ssh://git@github.com/Brooooooklyn/file-type.git",
+    "url": "git+ssh://git@github.com/toeverything/file-type.git",
     "type": "git"
   },
   "license": "MIT",
