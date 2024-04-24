@@ -59,52 +59,52 @@ export class FileType {
 }
 
 /** A kind of file format. */
-export const enum Kind {
+export enum Kind {
   /** Files and directories stored in a single, possibly compressed, archive. */
-  Archive = 0,
+  Archive = 'Archive',
   /** Musics, sound effects, and spoken audio recordings. */
-  Audio = 1,
+  Audio = 'Audio',
   /** Compressed single files or streams. */
-  Compressed = 2,
+  Compressed = 'Compressed',
   /** Organized collections of data. */
-  Database = 3,
+  Database = 'Database',
   /** Visual information using graphics and spatial relationships. */
-  Diagram = 4,
+  Diagram = 'Diagram',
   /** Floppy disk images, optical disc images and virtual machine disks. */
-  Disk = 5,
+  Disk = 'Disk',
   /** Word processing and desktop publishing documents. */
-  Document = 6,
+  Document = 'Document',
   /** Electronic books. */
-  Ebook = 7,
+  Ebook = 'Ebook',
   /** Machine-executable code, virtual machine code and shared libraries. */
-  Executable = 8,
+  Executable = 'Executable',
   /** Typefaces used for displaying text on screen or in print. */
-  Font = 9,
+  Font = 'Font',
   /** Mathematical formulas. */
-  Formula = 10,
+  Formula = 'Formula',
   /** Collections of geospatial features, GPS tracks and other location-related files. */
-  Geospatial = 11,
+  Geospatial = 'Geospatial',
   /** Animated images, icons, cursors, raster graphics and vector graphics. */
-  Image = 12,
+  Image = 'Image',
   /** Data that provides information about other data. */
-  Metadata = 13,
+  Metadata = 'Metadata',
   /** 3D models, CAD drawings, and other types of files used for creating or displaying 3D images. */
-  Model = 14,
+  Model = 'Model',
   /** Data which do not fit in any of the other kinds. */
-  Other = 15,
+  Other = 'Other',
   /** Collections of files bundled together for software distribution. */
-  Package = 16,
+  Package = 'Package',
   /** Lists of audio or video files, organized in a specific order for sequential playback. */
-  Playlist = 17,
+  Playlist = 'Playlist',
   /** Slide shows. */
-  Presentation = 18,
+  Presentation = 'Presentation',
   /** Copies of a read-only memory chip of computers, cartridges, or other electronic devices. */
-  Rom = 19,
+  Rom = 'Rom',
   /** Data in tabular form. */
-  Spreadsheet = 20,
+  Spreadsheet = 'Spreadsheet',
   /** Subtitles and captions. */
-  Subtitle = 21,
+  Subtitle = 'Subtitle',
   /** Moving images, possibly with color and coordinated sound. */
-  Video = 22
+  Video = 'Video'
 }
 
