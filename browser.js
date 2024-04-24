@@ -1,1 +1,1 @@
-export * from '@napi-rs/file-type-wasm32-wasi'
+export * from '@toeverything/file-type-wasm32-wasi'

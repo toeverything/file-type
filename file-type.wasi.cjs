@@ -39,9 +39,9 @@ if (__nodeFs.existsSync(__wasmDebugFilePath)) {
   __wasmFilePath = __wasmDebugFilePath
 } else if (!__nodeFs.existsSync(__wasmFilePath)) {
   try {
-    __wasmFilePath = __nodePath.resolve('@napi-rs/file-type-wasm32-wasi')
+    __wasmFilePath = __nodePath.resolve('@toeverything/file-type-wasm32-wasi')
   } catch {
-    throw new Error('Cannot find file-type.wasm32-wasi.wasm file, and @napi-rs/file-type-wasm32-wasi package is not installed.')
+    throw new Error('Cannot find file-type.wasm32-wasi.wasm file, and @toeverything/file-type-wasm32-wasi package is not installed.')
   }
 }
 

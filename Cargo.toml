@@ -12,7 +12,7 @@ crate-type = ["cdylib"]
 [dependencies]
 napi = "2"
 napi-derive = "2"
-file-format = "0.24"
+file-format = { version = "0.24", features = ["reader"] }
 
 [target.'cfg(not(any(target_os = "linux", target_family = "wasm")))'.dependencies]
 mimalloc = "0.1"
