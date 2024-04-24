@@ -1,6 +1,6 @@
 {
   "name": "@toeverything/file-type",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Guess the file-type of a Uint8Array",
   "main": "index.js",
   "types": "index.d.ts",
